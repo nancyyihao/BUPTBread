@@ -22,14 +22,14 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="30.0dip"
-                android:background="@drawable/wemall" />
+                android:background="@drawable/logo" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="20.0dip"
-                android:text="wemall Android版_v1.0 beta 1"
+                android:text="bread_version_v1.0 beta 1"
                 android:textColor="@color/custom_title"
                 android:textSize="@dimen/custom_title" />
 
@@ -38,16 +38,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="20.0dip"
-                android:text="微信号:iwemall QQ群:115303179"
-                android:textColor="@color/custom_title"
-                android:textSize="@dimen/custom_title" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="20.0dip"
-                android:text="开源地址 http://www.inuoer.com"
+                android:text="\@ 北邮面包团队"
                 android:textColor="@color/custom_title"
                 android:textSize="@dimen/custom_title" />
         </LinearLayout>

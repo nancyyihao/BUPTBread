@@ -28,7 +28,7 @@ public class WelcomeActivity extends Activity{
 		ImageView imageView = new ImageView(this);
 		imageView.setPadding(0, 100, 0, 0);
 		ll.addView(imageView);
-		imageView.setImageResource(R.drawable.wemall);
+		imageView.setImageResource(R.drawable.logo);
 		
 		translateanim = new TranslateAnimation(0, 0, imageView.getY(), imageView.getY()+100);
 		translateanim.setDuration(2000);

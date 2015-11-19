@@ -6,7 +6,7 @@ package com.bread.utils;
  *
  */
 public class Config {
-	public static final String APP_KEY = "wemall";
+	public static final String APP_KEY = "BUPTBread";
 	public static final String APP_URL = "http://www.uaide.net/wemall/";
 	public static final String PHONE = "10086";
 	

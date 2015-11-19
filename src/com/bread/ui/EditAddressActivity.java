@@ -44,7 +44,6 @@ public class EditAddressActivity extends Activity implements OnClickListener {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.address_addedit);
@@ -60,7 +59,6 @@ public class EditAddressActivity extends Activity implements OnClickListener {
 		new Thread(new Runnable() {
 			@Override
 			public void run() {
-				// TODO Auto-generated method stub
 				try {
 					String result = HttpUtil
 							.getPostJsonContent(Config.API_DO_ADDRESS + "?uid="
@@ -91,7 +89,6 @@ public class EditAddressActivity extends Activity implements OnClickListener {
 
 	@Override
 	public void onClick(View v) {
-		// TODO Auto-generated method stub
 		switch (v.getId()) {
 		case R.id.edit_address_actionbar_left_back:
 			finish();
@@ -104,14 +101,12 @@ public class EditAddressActivity extends Activity implements OnClickListener {
 	        		
 	        		@Override
 	        		public void run() {
-	        			// TODO Auto-generated method stub
 	        			try {
 	        				String result = HttpUtil.getPostJsonContent(Config.API_DO_ADDRESS + "?uid="+uid+"&do=2&address="+URLEncoder.encode(address.getText().toString(), "utf-8"));
 //						if (!result.isEmpty()) {
 	        				handler.sendEmptyMessage(0x123);
 //						}
 	        			} catch (Exception e) {
-	        				// TODO: handle exception
 	        			}
 	        		}
 	        	}).start();
