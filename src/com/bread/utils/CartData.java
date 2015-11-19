@@ -38,8 +38,6 @@ public class CartData {
 
 		for (int i = 0; i < list.size(); i++) {
 			if (list.get(i).get("id") == id) {
-//				removeCart(id);
-//				addCart(id, name, price, num, image);
 				list.get(i).put("id", id);
 				list.get(i).put("name", name);
 				list.get(i).put("price", price);

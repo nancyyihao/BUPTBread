@@ -1,28 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="#ffecedf1" >
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
 
-        <include
-            layout="@layout/wode_has_login"
-            android:visibility="gone" />
+            <include
+                layout="@layout/wode_has_login"
+                android:visibility="gone" />
 
-        <include
-            layout="@layout/wode_not_login"
-            android:visibility="visible" />
-        
-        <com.bread.widgets.UITableView 
-            android:id="@+id/me_fragment_others"
-             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-        </com.bread.widgets.UITableView>
-              
-    </LinearLayout>
+            <include
+                layout="@layout/wode_not_login"
+                android:visibility="visible" />
 
-</ScrollView>
+            <com.bread.widgets.UITableView
+                android:id="@+id/me_fragment_others"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </com.bread.widgets.UITableView>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

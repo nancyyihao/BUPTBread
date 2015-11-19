@@ -18,8 +18,8 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:textColor="#000000"
-            android:text="Copyright (C) 2014 inuoer.com All Rights Reserved"
-            android:textSize="10sp" />
+            android:text="\@北邮面包团队"
+            android:textSize="15sp" />
 
     </RelativeLayout>
 

@@ -21,8 +21,6 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.FrameLayout;
-import android.widget.FrameLayout.LayoutParams;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -56,17 +54,13 @@ public class MeFragment extends Fragment implements OnClickListener {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		this.inflater = inflater;
-
-		LayoutParams params = new LayoutParams(LayoutParams.MATCH_PARENT,
-				LayoutParams.MATCH_PARENT);
-		FrameLayout fl = new FrameLayout(getActivity());
-		fl.setLayoutParams(params);
-
-		fl.addView(inflater.inflate(R.layout.me_fragment, container, false));
-		fl.findViewById(R.id.wode_login_btn).setOnClickListener(this);
+		
+		View view = inflater.inflate(R.layout.me_fragment, container, false) ;
+		
+		view.findViewById(R.id.wode_login_btn).setOnClickListener(this);
 
 		CustomClickListener listener = new CustomClickListener();
-		tableView = (UITableView) fl.findViewById(R.id.me_fragment_others);
+		tableView = (UITableView) view.findViewById(R.id.me_fragment_others);
 		tableView
 				.addBasicItem(R.drawable.fragment_me_ic_location, "我的地址", null);
 		tableView.addBasicItem(R.drawable.fragment_me_ic_order, "我的订单", null);
@@ -80,16 +74,16 @@ public class MeFragment extends Fragment implements OnClickListener {
 		username = sharedpreferences.getString("username", "");
 
 		if (!("".equals(username))) {
-			fl.findViewById(R.id.wode_not_login_layout)
+			view.findViewById(R.id.wode_not_login_layout)
 					.setVisibility(View.GONE);
-			fl.findViewById(R.id.wode_has_login_layout).setVisibility(
+			view.findViewById(R.id.wode_has_login_layout).setVisibility(
 					View.VISIBLE);
-			TextView usernametv = (TextView) fl
+			TextView usernametv = (TextView) view
 					.findViewById(R.id.wode_username);
 			usernametv.setText(username);
 		}
 
-		return fl;
+		return view;
 	}
 
 	@SuppressLint("HandlerLeak")
@@ -136,7 +130,7 @@ public class MeFragment extends Fragment implements OnClickListener {
 			case 2:
 				intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:"
 						+ Config.PHONE));
-				startActivity(intent);// 内部类
+				startActivity(intent);
 				break;
 			case 3:
 				if (hasLogin) {
