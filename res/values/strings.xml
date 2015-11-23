@@ -7,4 +7,5 @@
     <string name="pull_to_refresh">下拉刷新</string>
     <string name="refreshing">加载中...</string>
     <string name="updating">最近更新：</string>
+    <string name="main_fragment_more_recommand_text">查看全部推荐</string>
 </resources>

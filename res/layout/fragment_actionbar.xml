@@ -55,7 +55,7 @@
             android:ellipsize="end"
             android:gravity="center_vertical"
             android:singleLine="true"
-            android:text="wemall"
+            android:text="BUPTBread"
             android:textColor="@color/custom_white"
             android:textSize="@dimen/custom_title_bar" />
 

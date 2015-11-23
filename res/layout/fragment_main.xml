@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.jason.bread.widget.uitableview.UITableView
+        android:id="@+id/fragment_main_today_discount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </com.jason.bread.widget.uitableview.UITableView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:baselineAligned="false"
+        android:orientation="horizontal" >
+
+        <!-- 左 -->
+
+        <LinearLayout
+            android:id="@+id/discount_left_lin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/today_left_discount_img"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:contentDescription="@null" />
+
+            <TextView
+                android:id="@+id/today_left_discount_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/today_left_discount_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/today_left_original_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 中 -->
+
+        <LinearLayout
+            android:id="@+id/discount_center_lin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/today_center_discount_img"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:contentDescription="@null" />
+
+            <TextView
+                android:id="@+id/today_center_discount_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/today_center_discount_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/today_center_original_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 右 -->
+
+        <LinearLayout
+            android:id="@+id/discount_right_lin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/today_right_discount_img"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:contentDescription="@null" />
+
+            <TextView
+                android:id="@+id/today_right_discount_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/today_right_discount_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/today_right_original_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/wode_denglu_background_selector"
+                    android:gravity="center" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.jason.bread.widget.uitableview.UITableView
+        android:id="@+id/fragment_main_today_recommand"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </com.jason.bread.widget.uitableview.UITableView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <ListView
+                android:id="@+id/recommand_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </ListView>
+
+            <Button
+                android:id="@+id/more_recommand_btn"
+                android:layout_width="match_parent"
+                android:layout_height="40.0dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/wode_denglu_background_selector"
+                android:gravity="center"
+                android:text="@string/main_fragment_more_recommand_text"
+                android:textColor="@color/custom_inputright_red"
+                android:textSize="16.0sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

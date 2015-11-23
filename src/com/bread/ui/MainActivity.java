@@ -78,6 +78,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener{
 		progressDialog.show();
 		initData();
 
+		Tabs.add((RadioButton)findViewById(R.id.main_page));
 		Tabs.add((RadioButton)findViewById(R.id.shop));
 		Tabs.add((RadioButton)findViewById(R.id.cart));
 		Tabs.add((RadioButton)findViewById(R.id.wode));
@@ -85,8 +86,10 @@ public class MainActivity extends FragmentActivity implements OnClickListener{
 		Tabs.get(0).setOnClickListener(this);
 		Tabs.get(1).setOnClickListener(this);
 		Tabs.get(2).setOnClickListener(this);
+		Tabs.get(3).setOnClickListener(this);
 
-		fragments.add(new MainFragment(listItem , MyAdapter));
+		fragments.add(new MainFragment());
+		fragments.add(new BreadsFragment(listItem , MyAdapter));
 		fragments.add(new CartFragment());
 		fragments.add(new MeFragment());
 		
