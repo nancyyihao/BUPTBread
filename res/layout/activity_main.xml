@@ -48,7 +48,6 @@
         <RadioButton
             android:id="@+id/shop"
             style="@style/waimai_tab"
-            android:checked="true"
             android:drawableTop="@drawable/waimai_tab_home_selector"
             android:text="面包" />
 

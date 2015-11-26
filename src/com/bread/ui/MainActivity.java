@@ -32,7 +32,7 @@ import com.bread.utils.HttpUtil;
 import com.bread.utils.MainAdapter;
 
 @SuppressLint("NewApi")
-public class MainActivity extends FragmentActivity implements OnClickListener{
+public class MainActivity extends FragmentActivity {
 	public String jsonString;
 	private FragmentManager fragmentManager;
 	private FragmentTransaction fragmentTransaction;
@@ -56,7 +56,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener{
 		}
 	};
 	
-	@Override
+	@SuppressLint("InflateParams") @Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -78,50 +78,51 @@ public class MainActivity extends FragmentActivity implements OnClickListener{
 		progressDialog.show();
 		initData();
 
-		Tabs.add((RadioButton)findViewById(R.id.main_page));
-		Tabs.add((RadioButton)findViewById(R.id.shop));
-		Tabs.add((RadioButton)findViewById(R.id.cart));
-		Tabs.add((RadioButton)findViewById(R.id.wode));
-		
-		Tabs.get(0).setOnClickListener(this);
-		Tabs.get(1).setOnClickListener(this);
-		Tabs.get(2).setOnClickListener(this);
-		Tabs.get(3).setOnClickListener(this);
-
+		fragmentManager = getSupportFragmentManager();
 		fragments.add(new MainFragment());
 		fragments.add(new BreadsFragment(listItem , MyAdapter));
 		fragments.add(new CartFragment());
 		fragments.add(new MeFragment());
 		
-		fragmentManager = getSupportFragmentManager();
-		Tabs.get(0).callOnClick();
+		findViewById(R.id.main_page).setOnClickListener(mOnClick) ;
+		findViewById(R.id.shop).setOnClickListener(mOnClick) ;
+		findViewById(R.id.cart).setOnClickListener(mOnClick) ;
+		findViewById(R.id.wode).setOnClickListener(mOnClick) ;
+		findViewById(R.id.main_page).callOnClick() ;
 	}
-
-	@Override
-	public void onClick(View v) {
-		switch (v.getId()) {
-		case R.id.shop:
-			fragmentTransaction = fragmentManager.beginTransaction();
-			fragmentTransaction.replace(R.id.framelayout_content, fragments.get(0));
-			title.setText("BUPTBread");
-			fragmentTransaction.commit();
-
-			break;
-		case R.id.cart:
-			fragmentTransaction = fragmentManager.beginTransaction();
-			fragmentTransaction.replace(R.id.framelayout_content, fragments.get(1));
-			title.setText("提交订单");
-			fragmentTransaction.commit();
-			break;
-		case R.id.wode:
-			fragmentTransaction = fragmentManager.beginTransaction();
-			fragmentTransaction.replace(R.id.framelayout_content, fragments.get(2));
-			title.setText("我的");
-			fragmentTransaction.commit();
-			
-			break;
+	
+	private OnClickListener mOnClick = new OnClickListener() {
+		
+		@Override
+		public void onClick(View v) {
+			switch (v.getId()) {
+			case R.id.main_page:
+				fragmentTransaction = fragmentManager.beginTransaction();
+				fragmentTransaction.replace(R.id.framelayout_content, fragments.get(0));
+				title.setText("首页");
+				fragmentTransaction.commit();
+				break;
+			case R.id.shop:
+				fragmentTransaction = fragmentManager.beginTransaction();
+				fragmentTransaction.replace(R.id.framelayout_content, fragments.get(1));
+				title.setText("面包");
+				fragmentTransaction.commit();
+				break;
+			case R.id.cart:
+				fragmentTransaction = fragmentManager.beginTransaction();
+				fragmentTransaction.replace(R.id.framelayout_content, fragments.get(2));
+				title.setText("购物车");
+				fragmentTransaction.commit();
+				break;
+			case R.id.wode:
+				fragmentTransaction = fragmentManager.beginTransaction();
+				fragmentTransaction.replace(R.id.framelayout_content, fragments.get(3));
+				title.setText("我的");
+				fragmentTransaction.commit();
+				break;
+			}
 		}
-	}
+	};
 	
 	public void initData() {
 		new Thread(new Runnable() {

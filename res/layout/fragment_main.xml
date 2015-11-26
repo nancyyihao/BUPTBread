@@ -4,11 +4,11 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <com.jason.bread.widget.uitableview.UITableView
+    <com.bread.widgets.UITableView
         android:id="@+id/fragment_main_today_discount"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
-    </com.jason.bread.widget.uitableview.UITableView>
+    </com.bread.widgets.UITableView>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -146,11 +146,11 @@
         </LinearLayout>
     </LinearLayout>
 
-    <com.jason.bread.widget.uitableview.UITableView
+    <com.bread.widgets.UITableView
         android:id="@+id/fragment_main_today_recommand"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
-    </com.jason.bread.widget.uitableview.UITableView>
+    </com.bread.widgets.UITableView>
 
     <ScrollView
         android:layout_width="match_parent"
