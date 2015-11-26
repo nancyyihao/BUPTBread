@@ -27,8 +27,8 @@ import android.widget.Toast;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
+import com.bread.network.HttpUtil;
 import com.bread.utils.Config;
-import com.bread.utils.HttpUtil;
 import com.bread.widgets.UITableView;
 
 public class MeFragment extends Fragment implements OnClickListener {

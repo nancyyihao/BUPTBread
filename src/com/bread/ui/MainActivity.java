@@ -26,10 +26,9 @@ import android.widget.Toast;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import com.bread.network.HttpUtil;
 import com.bread.utils.CartData;
 import com.bread.utils.Config;
-import com.bread.utils.HttpUtil;
-import com.bread.utils.MainAdapter;
 
 @SuppressLint("NewApi")
 public class MainActivity extends FragmentActivity {

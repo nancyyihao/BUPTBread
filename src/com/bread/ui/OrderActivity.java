@@ -23,8 +23,8 @@ import android.widget.SimpleAdapter;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import com.bread.network.HttpUtil;
 import com.bread.utils.Config;
-import com.bread.utils.HttpUtil;
 
 public class OrderActivity extends Activity implements OnClickListener {
 	private SharedPreferences sharedpreferences;

@@ -16,8 +16,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.alibaba.fastjson.JSONObject;
+import com.bread.network.HttpUtil;
 import com.bread.utils.Config;
-import com.bread.utils.HttpUtil;
 
 public class EditAddressActivity extends Activity implements OnClickListener {
 

@@ -24,10 +24,9 @@ import android.widget.Toast;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import com.bread.utils.CartAdapter;
+import com.bread.network.HttpUtil;
 import com.bread.utils.CartData;
 import com.bread.utils.Config;
-import com.bread.utils.HttpUtil;
 
 public class CartFragment extends Fragment implements OnClickListener {
 	private Intent intent;

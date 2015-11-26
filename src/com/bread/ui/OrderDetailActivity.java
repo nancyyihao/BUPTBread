@@ -21,8 +21,8 @@ import android.widget.TextView;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import com.bread.network.HttpUtil;
 import com.bread.utils.Config;
-import com.bread.utils.HttpUtil;
 
 public class OrderDetailActivity extends Activity implements OnClickListener {
 	private String order_id;
